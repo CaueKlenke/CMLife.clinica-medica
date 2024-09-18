@@ -9,6 +9,19 @@ body {
     color: #0000008c;
 }
 
+h3:first-of-type {
+    color: #000;
+    font-weight: 600;
+    padding: 25px 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
 /* topo */
 
 .links-topo {
@@ -19,8 +32,13 @@ body {
 .links-topo a {
     color: #fff;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 600;
     margin: 10px;
+}
+
+.links-topo a:hover {
+    color: #000;
 }
 
 header {
@@ -29,8 +47,12 @@ header {
 
 }
 
+header img {
+    margin: 0 10px;
+}
+
 .topo-home {
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
 
     display: flex;
@@ -56,12 +78,17 @@ header {
 .banner-home {
     width: 100%;
     height: 80vh;
+    margin: 0 auto;
     position: relative;
 
     background: url('assets/recepcao.png') no-repeat;
     background-size: cover;   
     
     font-family: "Merriweather", serif;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .titulo-banner {
@@ -69,15 +96,15 @@ header {
 
     height: 100%;
     width: 1024px;
-    margin: 0 auto;
+    margin: 0 10px;    
 
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .box-titulo {
-    width: 950px;
-    height: 190px;
+    max-width: 950px;
     padding: 30px 20px; 
 
     background-color: #0000003a;
@@ -96,16 +123,13 @@ header {
 
 /* sobre */
 
-h3:first-of-type {
-    color: #000;
-    font-weight: 600;
-    padding: 25px 0;
-
-}
-
 .sobre {
-    width: 768px;
+    max-width: 768px;
     margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .sobre article {
@@ -113,12 +137,7 @@ h3:first-of-type {
 }
 
 .sobre article h3 {
-    font-size: 24px;
     margin: 20px 0 10px ;
-}
-
-.sobre article p {
-    font-size: 20px;
 }
 
 .sobre section img {
@@ -152,4 +171,97 @@ h3:first-of-type {
     align-items: center;
 
     margin: 30px;
+}
+
+/* main */
+
+main {
+    max-width: 1024px;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.main-texto {
+    max-width: 768px;
+    margin: 10px auto 20px;
+}
+
+figure img {
+    max-width: 308px;
+    border-radius: 10px 10px 0 0;
+    margin: 0 10px;
+}
+
+.galeria {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin: 40px 0 50px;
+}
+
+.galeria figure {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 8px ;
+    border-radius: 10px;
+}
+
+.galeria figcaption {
+    padding: 10px;
+}
+
+/* horários / contatos */
+
+.botao-azul p {
+    padding: 20px;
+    margin: 0 auto 5px;
+    width: 200px;
+
+    border-radius: 10px;
+    background: #03c2b2;
+    color: white;
+}
+
+.box-iframe {
+    max-width: 1024px;
+    margin: 40px auto;
+}
+
+iframe {
+    width: 100%;
+}
+
+/* rodapé */
+
+footer {
+    width: 100%;
+
+    background: #056a77;
+    color: white;
+}
+
+.box-footer {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+footer img {
+    margin-top: 20px;
+}
+
+footer p {
+    padding: 10px;
+}
+
+.texto-rodape {
+    padding: 10px 0 30px;
 }
