@@ -1,0 +1,101 @@
+section nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 40px 0;
+}
+
+section nav a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+
+    margin: 0 10px;
+
+    border-bottom: 3px solid #2ec5cf
+}
+
+section nav a:hover {
+    color: #0d6e71; 
+}
+
+section article {
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* Tabela de Especialidades */ 
+
+.intro-medicos h3{
+    color: #0000008c;
+    font-size: 22px; 
+}
+
+.intro-medicos p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.intro-medicos {
+    width: 768px;
+    margin: 0 auto 30px;
+}
+
+.tabela {
+    display: flex;
+
+    width: 1024px;
+    height: 250px;
+    margin: 10px auto 30px;
+}
+
+.tabela table {
+    border-spacing: 0;
+    width: 70%;
+    height: 100%;
+}
+
+.tabela img {
+    width: 300px;
+    height: 100%
+}
+
+.tabela thead {
+    background-color: #2ec5cf;
+    color: white;
+    text-align: left;
+}
+
+.tabela tr th{
+    padding: 10px 15px;
+    font-weight: 600;
+}
+
+.tabela tr td{
+    padding: 13px
+}
+
+.tabela tbody tr:nth-of-type(even) {
+    background-color: #f1f1f1;
+}
+
+.tabela tbody tr:nth-of-type(odd) {
+    background-color: #cdcdcd;
+    border: 1px solid #f1f1f1;
+}
+
+.tabela-fisio img {
+    height: 100%;
+}
+
+.tabela-fisio tr td {
+    padding: 11px 13px
+}
+
+.tabela-fisio {
+    margin-bottom: 50px
+}
+
+/* colocar o zoom do navegador em 100% e arrumar o tamanho dos elementos */
