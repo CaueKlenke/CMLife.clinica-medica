@@ -1,12 +1,13 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Source, sans Pro', sans-serif;
+    font-family: 'Source sans Pro', sans-serif;
     color: #0000008c;
+    overflow-x: hidden
 }
 
 h3:first-of-type {
@@ -17,10 +18,6 @@ h3:first-of-type {
     text-align: center;
 }
 
-p {
-    font-size: 20px;
-    text-align: center;
-}
 
 /* topo */
 
@@ -32,9 +29,10 @@ p {
 .links-topo a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     margin: 10px;
+    transition: color 0.3s ease;
 }
 
 .links-topo a:hover {
@@ -48,6 +46,8 @@ header {
 
 header img {
     margin: 0 10px;
+
+    width: 150px
 }
 
 .topo-home {
@@ -82,7 +82,8 @@ header img {
     position: relative;
 
     background: url('assets/recepcao.png') no-repeat;
-    background-size: cover;   
+    background-size: cover;  
+    background-position: center; 
     
     font-family: "Merriweather", serif;
 
@@ -132,8 +133,15 @@ header img {
     flex-wrap: wrap;
 }
 
-.sobre article {
+.sobre p {
+    font-size: 18px;
+}
+
+.sobre .sobre-texto {
     text-align: center;
+    
+    max-width: 768px;
+    margin: 0 auto
 }
 
 .sobre article h3 {
@@ -158,7 +166,7 @@ header img {
 }
 
 .lista-sobre li {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .lista-sobre ul {
@@ -188,6 +196,10 @@ main {
 .main-texto {
     max-width: 768px;
     margin: 10px auto 20px;
+}
+
+.main-texto p {
+    font-size: 18px
 }
 
 figure img {
@@ -221,11 +233,18 @@ figure img {
 .botao-azul p {
     padding: 20px;
     margin: 0 auto 5px;
-    width: 200px;
+    width: 180px;
+    text-align: center;
 
+    font-size: 18px;
     border-radius: 10px;
     background: #03c2b2;
     color: white;
+}
+
+.box-contato p {
+    text-align: center;
+    font-size: 18px
 }
 
 .box-iframe {
@@ -255,10 +274,12 @@ footer {
 
 footer img {
     margin-top: 20px;
+    width: 150px
 }
 
 footer p {
     padding: 10px;
+    font-size: 16px
 }
 
 .texto-rodape {
@@ -290,11 +311,7 @@ footer p {
     }
 
     h3:first-of-type {
-        font-size: 22px
-    }
-
-    p {
-        font-size: 16px
+        font-size: 22px;
     }
 
     .banner-home {
@@ -317,12 +334,11 @@ footer p {
         margin: 0 auto;
     }
     .box-titulo h1 {
-        font-size: 17px;
         line-height: 2;
     }
 
     .sobre article, .box-contatos p {
-        padding: 0 15px
+        padding: 0 15px;
     }
     .sobre img {
         display: none;
@@ -331,13 +347,17 @@ footer p {
         font-size: 20px;
         text-align: center;
 
-        margin-top: 10px 
+        margin-top: 10px ;
     }
     .lista-sobre li {
         font-size: 16px
     }
     .galeria img {
         width: 100%;
+    }
+
+    .botao-azul p {
+        font-size: 16px
     }
 
     iframe {
@@ -348,16 +368,13 @@ footer p {
         width: 100%;
     }
 
-    footer p {
+    footer p, address {
         padding: 0 15px;
         line-height: 2;
     }
 }
 
 @media (max-width: 350px) {
-    .box-titulo h1 {
-        font-size: 11px;
-    }
     .box-titulo {
         height: 110px;
 
@@ -371,7 +388,6 @@ footer p {
         display: flex;
         align-items: center;
     }
-
     .galeria figure {
         width: 90%;
         margin: 10px auto;
@@ -380,12 +396,15 @@ footer p {
         align-items: center
     }
 
-
+    .sobre p {
+        font-size: 12px
+    }
 }
+
+
 
 @media (max-width: 768px) {
     p {
-        font-size: 18px;
         margin: 0 8px
     }
 
@@ -397,7 +416,7 @@ footer p {
         height: 400px;
     }
     .box-titulo h1 {
-        font-size: 40px;
+        font-size: 18px;
     }
     .box-titulo {
         max-width: 700px;
@@ -415,10 +434,35 @@ footer p {
         height: 300px;
         margin: 15px 0;
     }
+
+    .sobre p {
+        font-size: 16px
+    }
+    .sobre li {
+        font-size: 16px
+    }
+    .sobre h3 {
+        font-size: 20px
+    }
+    .lista-sobre h4 {
+        font-size: 18px;
+    }
+    .main-texto p {
+        font-size: 16px
+    }
+    .box-contato p {
+        font-size: 16px
+    }
+    footer p, address {
+        font-size: 14px;
+    }
+    footer img {
+        width: 120px
+    }
 }
 
 @media (min-width: 769px) {
-    p {
+    p, address {
         font-size: 18px;
         margin: 0 20px;
     }
@@ -435,7 +479,7 @@ footer p {
 }
 
 @media (min-width: 1024px) {
-    p {
+    p, address {
         font-size: 20px;
 }   
     .galeria figure {
